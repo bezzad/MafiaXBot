@@ -62,11 +62,101 @@ namespace MafiaX.BotEngine.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} added to game successful.
+        /// </summary>
+        internal static string _0_added_to_game_successful {
+            get {
+                return ResourceManager.GetString("_0_added_to_game_successful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} already has killed.
+        /// </summary>
+        internal static string _0_already_has_killed {
+            get {
+                return ResourceManager.GetString("_0_already_has_killed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} killed.
+        /// </summary>
+        internal static string _0_killed {
+            get {
+                return ResourceManager.GetString("_0_killed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game already started before your registering!.
+        /// </summary>
+        internal static string Game_already_started_before_your_registering {
+            get {
+                return ResourceManager.GetString("Game_already_started_before_your_registering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mafia.
         /// </summary>
         internal static string Mafia {
             get {
                 return ResourceManager.GetString("Mafia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mafia count is less than 2.
+        /// </summary>
+        internal static string Mafia_count_is_less_than_2 {
+            get {
+                return ResourceManager.GetString("Mafia_count_is_less_than_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} already exist in game.
+        /// </summary>
+        internal static string The_0_already_exist_in_game {
+            get {
+                return ResourceManager.GetString("The_0_already_exist_in_game", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The count of mafia is {0} and police is {1}. Do you want to continue? (Y/n).
+        /// </summary>
+        internal static string The_count_of_mafia_is_0_and_police_is_1 {
+            get {
+                return ResourceManager.GetString("The_count_of_mafia_is_0_and_police_is_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The count of players must be more than 5.
+        /// </summary>
+        internal static string The_count_of_players_must_be_more_than_5 {
+            get {
+                return ResourceManager.GetString("The_count_of_players_must_be_more_than_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The sum of police and mafia counts is not equal!.
+        /// </summary>
+        internal static string The_sum_of_police_and_mafia_counts_is_not_equal {
+            get {
+                return ResourceManager.GetString("The_sum_of_police_and_mafia_counts_is_not_equal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This_user_didn&apos;t_registered_before_starting_game.
+        /// </summary>
+        internal static string This_user_did_not_registered_before_starting_game {
+            get {
+                return ResourceManager.GetString("This_user_did_not_registered_before_starting_game", resourceCulture);
             }
         }
     }

@@ -117,7 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Game_already_started_before_your_registering" xml:space="preserve">
+    <value>Game already started before your registering!</value>
+  </data>
   <data name="Mafia" xml:space="preserve">
     <value>Mafia</value>
+  </data>
+  <data name="Mafia_count_is_less_than_2" xml:space="preserve">
+    <value>Mafia count is less than 2</value>
+  </data>
+  <data name="The_0_already_exist_in_game" xml:space="preserve">
+    <value>The {0} already exist in game</value>
+  </data>
+  <data name="The_count_of_mafia_is_0_and_police_is_1" xml:space="preserve">
+    <value>The count of mafia is {0} and police is {1}. Do you want to continue? (Y/n)</value>
+  </data>
+  <data name="The_count_of_players_must_be_more_than_5" xml:space="preserve">
+    <value>The count of players must be more than 5</value>
+  </data>
+  <data name="The_sum_of_police_and_mafia_counts_is_not_equal" xml:space="preserve">
+    <value>The sum of police and mafia counts is not equal!</value>
+  </data>
+  <data name="This_user_did_not_registered_before_starting_game" xml:space="preserve">
+    <value>This_user_didn't_registered_before_starting_game</value>
+  </data>
+  <data name="_0_added_to_game_successful" xml:space="preserve">
+    <value>{0} added to game successful</value>
+  </data>
+  <data name="_0_already_has_killed" xml:space="preserve">
+    <value>{0} already has killed</value>
+  </data>
+  <data name="_0_killed" xml:space="preserve">
+    <value>{0} killed</value>
   </data>
 </root>
