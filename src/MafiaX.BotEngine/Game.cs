@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MafiaX.BotEngine
 {
@@ -107,7 +108,7 @@ namespace MafiaX.BotEngine
             return "The_count_of_mafia_is_0_and_police_is_1".GetLocalized(Culture);
         }
 
-        public string InitPlayersRole()
+        public async Task<string> InitPlayersRole()
         {
             if (Players.Count <= 5)
                 return "The_count_of_players_must_be_more_than_5".GetLocalized(Culture);
@@ -118,12 +119,42 @@ namespace MafiaX.BotEngine
             if (Players.Count - MafiaPlayersCount != PolicePlayersCount)
                 return "The_sum_of_police_and_mafia_counts_is_not_equal".GetLocalized(Culture);
 
-
+            Players = await Players.RandomCross();
+            var playerKeys = Players.Keys.ToArray();
             var rand = new Random();
 
-            //TODO
+            //
+            // select mafia
+            for (int i = 0; i < MafiaPlayersCount; i++)
+            {
+                MafiaPlayers[playerKeys[i]] = Players[playerKeys[i]];
+            }
+            //
+            // select police
+            for (int i = MafiaPlayersCount; i < Players.Count; i++)
+            {
+                PolicePlayers[playerKeys[i]] = Players[playerKeys[i]];
+            }
+            //
+            // select godfather
+            var godfatherKey = playerKeys[rand.Next(0, MafiaPlayersCount - 1)];
+            GodfatherPlayer = MafiaPlayers[godfatherKey];
+            //
+            // select detective and doctor
+            long detectiveKey;
+            long doctorKey;
+            do
+            {
+                detectiveKey = playerKeys[rand.Next(MafiaPlayersCount, Players.Count - 1)];
+                await Task.Delay(1);
+                doctorKey = playerKeys[rand.Next(MafiaPlayersCount, Players.Count - 1)];
+            } while (detectiveKey == doctorKey);
+
+            GodfatherPlayer = MafiaPlayers[godfatherKey];
 
             return "".GetLocalized(Culture);
         }
+
+
     }
 }
